@@ -1,0 +1,127 @@
+.main_page {
+  margin-top: 1.5rem;
+
+  &_head {
+    background: url("/src/assets/main_bg.jpg") center top / cover no-repeat;
+    border-radius: 1.625rem;
+    color: white;
+
+    .header {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr 2fr 32px;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.125rem 1.875rem;
+
+      &_element {
+        text-align: center;
+      }
+
+      &_start {
+        background: white;
+        width: min-content;
+        color: black;
+        padding: 0.375rem 2rem 0.5rem 2rem;
+        border-radius: 50rem;
+        border: none;
+        font-size: 11px;
+        justify-self: end;
+        will-change: filter;
+        transition: filter 300ms;
+        &:hover {
+          filter: drop-shadow(0 0 1em #61dafbaa);
+        }
+      }
+
+      &_user {
+        justify-self: end;
+        will-change: filter;
+        transition: filter 300ms;
+        &:hover {
+          filter: drop-shadow(0 0 1em #646cffaa);
+        }
+      }
+
+      .logo {
+        width: 104px;
+        will-change: filter;
+        transition: filter 300ms;
+      }
+
+      .logo:hover {
+        filter: drop-shadow(0 0 2em #646cffaa);
+      }
+    }
+
+    .content {
+      padding: 0 5.125rem 8.375rem;
+
+      h1 {
+        margin: 1.5rem 0;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        height: 41px;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &_conditions {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin-top: 4.5rem;
+    .txt {
+      margin-right: auto;
+      margin-top: 2rem;
+      .list {
+        list-style: none;
+        padding: 0;
+        li {
+          font-size: 1.25rem;
+          font-weight: 500;
+          margin: .75rem 0;
+          summary {
+            display: flex;
+            border-bottom: 0.0625rem solid rgb(134, 134, 134);
+            gap: 8.625rem;
+            width: 455px;
+            &::marker {
+              content: '';
+            }
+          }
+          p {
+            width: 520px;
+            font-size: 0.88rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .car {
+      border-radius: 1.15rem;
+      background: linear-gradient(180.00deg, rgb(255, 216, 85) 69.915%,rgb(244, 199, 48) 99.666%);
+      line-height: 1.1;
+      margin-top: .625rem;
+      & > div:nth-child(1) {
+        font-size: 2.75rem;
+        font-weight: 700;
+        padding: 1.25rem 1.5rem 0;
+      }
+      & > div:nth-child(2) {
+        font-size: 1.22rem;
+        font-weight: 600;
+        padding: 0 1.5rem;
+      }
+      img {
+        position: relative;
+        right: -5px;
+      }
+    }
+  }
+}
