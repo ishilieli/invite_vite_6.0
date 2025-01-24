@@ -3,6 +3,7 @@ import logoWhite from "../../assets/logo_white.svg";
 import userLogo from "../../assets/user_logo.svg";
 import manWithPhone from "../../assets/man_with_phone.svg";
 import conditionCar from "../../assets/condition_car.webp";
+import todoPic from "../../assets/todo.svg";
 import {Helmet} from 'react-helmet';
 
 export const MainPageUi = () => {
@@ -20,7 +21,7 @@ export const MainPageUi = () => {
                     rel="stylesheet"></link>
             </Helmet>
             <div className={styles.main_page}>
-                <div className={styles.main_page_head}>
+                <section className={styles.main_page_head}>
                     <header className={styles.header}>
                         <a className={styles.header_link} href="/" target="_blank">
                             <img src={logoWhite} className={styles.logo} alt="Invite"/>
@@ -33,12 +34,12 @@ export const MainPageUi = () => {
                                                                              alt="user logo"/></a>
                     </header>
                     <div className={styles.content}>
-                        <h1>Приводи клиентов – зарабатывай с нами !</h1>
+                        <h1>Приводи клиентов – <br/>зарабатывай с нами !</h1>
                         <p>Мы платим до 150.000₽ за каждого приведенного вами клиента</p>
                         <button className={styles.btn_main}>Начать зарабатывать</button>
                     </div>
-                </div>
-                <div className={styles.main_page_conditions}>
+                </section>
+                <section className={styles.main_page_conditions}>
                     <div className={styles.txt}>
                         <h2>Прозрачная сделка</h2>
                         <p>Привлекайте покупателей в автосалон и получайте вознаграждение за <br/> успешную сделку</p>
@@ -80,7 +81,56 @@ export const MainPageUi = () => {
                         <div>Автосалонов</div>
                         <img width={231} height={153} src={conditionCar} alt="Машина"/>
                     </div>
+                </section>
+                <section className={styles.main_page_steps}>
+                    <h2>Что нужно сделать?</h2>
+                    <p>Мы предлагаем простой способ заработка на личных рекомендациях, доступный каждому</p>
+                    <div className={styles.box}>
+                        <div className={styles.box_item}>
+                            <span>1</span>
+                            <div>Получите карточку партнера</div>
+                            <p>Карточка уникальна для каждого партнера. При предъявлении карты в салоне клиент
+                                автоматически закрепится за вами.</p>
+                        </div>
+                        <div className={styles.box_item}>
+                            <span>2</span>
+                            <div>Приведите друга для покупки авто</div>
+                            <p>Вместе подайте необходимый пакет документов. Если ваш друг покупает автомобиль — вы
+                                получаете до 100.000 рублей в этот же день.</p>
+                        </div>
+                        <div className={styles.box_item}>
+                            <span>3</span>
+                            <div>Заберите награду у менеджера</div>
+                            <p>После завершения процедуры оформления партнерский менеджер выплатит нужную сумму любым
+                                удобным Вам способом.</p>
+                        </div>
+                        <div className={styles.box_item}>
+                            <img src={todoPic} alt="Начать зарабатывать"/>
+                            <button className={styles.btn_main}>Начать зарабатывать</button>
+                        </div>
+                    </div>
+                </section>
+                <div className={styles.main_page_faq}>
+                    <h2>Ответы на вопросы</h2>
+                    <details>
+                        <summary>Зачем нужна партнерская программа?</summary>
+                        <p>Партнёрскую программу Яндекс Go и Яндекс Еда могут подключить только юридические лица или
+                            индивидуальные предприниматели.</p>
+                    </details>
+                    <details>
+                        <summary>Зачем нужна партнерская программа?</summary>
+                        <p>Партнёрскую программу Яндекс Go и Яндекс Еда могут подключить только юридические лица или
+                            индивидуальные предприниматели.</p>
+                    </details>
                 </div>
+                <section className={styles.main_page_footer}>
+                    <footer className={styles.footer}>
+                        <p>Примечание. Информация не является офертой, частью договора или заверениями об обстоятельствах.
+                            Полные условия сотрудничества вы можете найти в договоре, который заключили с ООО МАСМОТОРС.</p>
+                        <a href="/login">Политика конфиденциальности</a>
+                        <p>© 2010 - 2024 Автосалон МАС Моторс.</p>
+                    </footer>
+                </section>
             </div>
         </>
     )
